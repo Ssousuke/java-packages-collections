@@ -1,4 +1,6 @@
-package br.com.china.bibliotecas.teste;
+package br.com.china.bibliotecas.strings;
+
+import java.lang.*;
 
 /**
  * @author Wesley Farias
