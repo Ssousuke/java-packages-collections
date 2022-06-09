@@ -1,4 +1,4 @@
-package br.com.china.bibliotecas.test;
+package br.com.china.bibliotecas.teste;
 
 import br.com.china.bibliotecas.modelo.Cliente;
 import br.com.china.bibliotecas.modelo.ContaCorrente;

@@ -1,4 +1,4 @@
-package br.com.china.bibliotecas.test;
+package br.com.china.bibliotecas.teste;
 
 public class TesteArrayDePrimitivos {
     public static void main(String[] args) {

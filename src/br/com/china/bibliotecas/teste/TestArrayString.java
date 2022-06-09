@@ -1,4 +1,4 @@
-package br.com.china.bibliotecas.test;
+package br.com.china.bibliotecas.teste;
 
 public class TestArrayString {
     public static void main(String[] args) {
