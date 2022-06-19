@@ -17,7 +17,7 @@ public class TesteGuardaContas {
         int tamanho = guardaContas.getQuantidadeDeElementos();
         System.out.println(tamanho);
 
-        Conta ref = guardaContas.getReferenciaConta(1);
+        Conta ref = (Conta) guardaContas.getReferenciaConta(1);
         System.out.println(ref.getNumero());
     }
 }

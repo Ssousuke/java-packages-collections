@@ -1,15 +1,15 @@
 package br.com.china.bibliotecas.modelo;
 
 public class GuardaContas {
-    private Conta[] fererencias;
+    private Object[] fererencias;
     private int posicao;
 
     public GuardaContas() {
-        this.fererencias = new Conta[10];
+        this.fererencias = new Object[10];
         this.posicao = 0;
     }
 
-    public void adiciona(Conta ref) {
+    public void adiciona(Object ref) {
         this.fererencias[this.posicao] = ref;
         this.posicao++;
     }
@@ -18,7 +18,7 @@ public class GuardaContas {
         return this.posicao;
     }
 
-    public Conta getReferenciaConta(int posicao) {
+    public Object getReferenciaConta(int posicao) {
         return this.fererencias[posicao];
     }
 }
