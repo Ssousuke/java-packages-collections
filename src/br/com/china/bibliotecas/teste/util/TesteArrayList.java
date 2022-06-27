@@ -1,13 +1,14 @@
 package br.com.china.bibliotecas.teste.util;
 
-import java.util.ArrayList;
-
 import br.com.china.bibliotecas.modelo.Conta;
 import br.com.china.bibliotecas.modelo.ContaCorrente;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TesteArrayList {
     public static void main(String[] args) {
-        ArrayList<Conta> list = new ArrayList<Conta>();
+        List<Conta> list = new ArrayList<Conta>();
 
         Conta cc = new ContaCorrente(22, 11);
         list.add(cc);
