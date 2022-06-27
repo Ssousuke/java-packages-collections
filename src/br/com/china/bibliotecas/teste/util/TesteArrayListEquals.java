@@ -1,9 +1,9 @@
 package br.com.china.bibliotecas.teste.util;
 
-import java.util.ArrayList;
-
 import br.com.china.bibliotecas.modelo.Conta;
 import br.com.china.bibliotecas.modelo.ContaCorrente;
+
+import java.util.ArrayList;
 
 public class TesteArrayListEquals {
     public static void main(String[] args) {
