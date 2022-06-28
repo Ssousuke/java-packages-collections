@@ -5,6 +5,7 @@ import br.com.china.bibliotecas.modelo.Conta;
 import br.com.china.bibliotecas.modelo.ContaCorrente;
 
 import java.util.ArrayList;
+// import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -14,13 +15,13 @@ public class TesteContaComparator {
         Cliente clienteCc1 = new Cliente();
         clienteCc1.setNome("Wesley");
         cc1.setTitular(clienteCc1);
-        cc1.deposita(200.0);
+        cc1.deposita(250.0);
 
         Conta cc2 = new ContaCorrente(23, 11);
         Cliente clienteCc2 = new Cliente();
         clienteCc2.setNome("Matheus");
         cc2.setTitular(clienteCc2);
-        cc2.deposita(250.0);
+        cc2.deposita(200.0);
 
         Conta cc3 = new ContaCorrente(24, 26);
         Cliente clienteCc3 = new Cliente();
@@ -39,8 +40,14 @@ public class TesteContaComparator {
         }
 
         // NumeroDaContaComparator comparator = new NumeroDaContaComparator();
-        TitularDaContaComparator comparator = new TitularDaContaComparator();
-        contas.sort(comparator);
+        // TitularDaContaComparator comparator = new TitularDaContaComparator();
+
+        // contas.sort(new TitularDaContaComparator());
+        contas.sort(null);
+
+        // Collections é uma classe. Não confundir com a interface Collection.
+        // Collections.sort(contas);
+        // Collections.reverse(contas);
         System.out.println("#### Ordernado ####");
 
         for (Conta c : contas) {
@@ -61,7 +68,6 @@ class TitularDaContaComparator implements Comparator<Conta> {
         String nomeC2 = conta2.getTitular().getNome();
         return nomeC1.compareTo(nomeC2);
     }
-
 }
 
 // Classe define as regras que serão aplicadas a ordenação
@@ -73,12 +79,6 @@ class NumeroDaContaComparator implements Comparator<Conta> {
      */
     @Override
     public int compare(Conta conta1, Conta conta2) {
-        if (conta1.getNumero() < conta2.getNumero()) {
-            return -1;
-        }
-        if (conta1.getNumero() > conta2.getNumero()) {
-            return 1;
-        }
-        return 0;
+        return Integer.compare(conta1.getNumero(), conta2.getNumero());
     }
 }

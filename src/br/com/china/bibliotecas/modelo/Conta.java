@@ -3,7 +3,7 @@ package br.com.china.bibliotecas.modelo;
 /**
  * @author Wesley Farias
  */
-public abstract class Conta extends Object {
+public abstract class Conta extends Object implements Comparable<Conta> {
     protected double saldo;
     private int agencia;
     private int numero;
@@ -95,8 +95,13 @@ public abstract class Conta extends Object {
     }
 
     @Override
+    public int compareTo(Conta conta) {
+        return Double.compare(this.saldo, conta.saldo);
+    }
+
+    @Override
     public String toString() {
-        return "Numero: " + this.numero + ", Agencia: " + this.agencia;
+        return "Numero: " + this.numero + ", Agencia: " + this.agencia + ", Saldo:" + this.saldo;
     }
 
 }
