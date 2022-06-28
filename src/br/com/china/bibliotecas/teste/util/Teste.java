@@ -32,33 +32,20 @@ public class Teste {
         contas.add(cc1);
         contas.add(cc2);
         contas.add(cc3);
-        System.out.println("#### Não ordernado ####");
-        for (Conta c : contas) {
-            System.out.println(c + ", " + c.getTitular().getNome());
-
-        }
-        // Classe anônima
-        contas.sort(new Comparator<Conta>() {
-            @Override
-            public int compare(Conta conta1, Conta conta2) {
-                return Integer.compare(conta1.getNumero(), conta2.getNumero());
-            }
-        });
 
         // Classe anônima
-        Comparator<Conta> comp = new Comparator<Conta>() {
-            @Override
-            public int compare(Conta conta1, Conta conta2) {
-                String nomeC1 = conta1.getTitular().getNome();
-                String nomeC2 = conta2.getTitular().getNome();
-                return nomeC1.compareTo(nomeC2);
-            }
+        contas.sort((conta1, conta2) -> Integer.compare(conta1.getNumero(), conta2.getNumero()));
+
+        // Classe anônima
+        Comparator<Conta> comp = (Conta conta1, Conta conta2) -> {
+            String nomeC1 = conta1.getTitular().getNome();
+            String nomeC2 = conta2.getTitular().getNome();
+            return nomeC1.compareTo(nomeC2);
         };
+        // contas.sort(comp);
 
-        System.out.println("#### Ordernado ####");
-
-        for (Conta c : contas) {
-            System.out.println(c + ", " + c.getTitular().getNome());
-        }
+        // Para a lista de contas faça um forEach
+        // Para cada elemento imprima
+        contas.forEach((conta) -> System.out.println(conta + ", " + conta.getTitular().getNome()));
     }
 }
