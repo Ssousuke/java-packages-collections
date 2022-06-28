@@ -33,7 +33,7 @@ public class Teste {
         contas.add(cc2);
         contas.add(cc3);
 
-        // Classe anônima
+        // Lambda
         contas.sort((conta1, conta2) -> Integer.compare(conta1.getNumero(), conta2.getNumero()));
 
         // Classe anônima
