@@ -1,4 +1,4 @@
-package br.com.china.bibliotecas.teste.exerc;
+package br.com.china.bibliotecas.exerc;
 
 import java.util.Arrays;
 
