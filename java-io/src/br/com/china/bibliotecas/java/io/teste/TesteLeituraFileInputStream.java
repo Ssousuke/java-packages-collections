@@ -3,7 +3,7 @@ package br.com.china.bibliotecas.java.io.teste;
 
 import java.io.*;
 
-public class TesteLeitura {
+public class TesteLeituraFileInputStream {
     public static void main(String[] args) throws IOException {
         // Fluxo de entrada com arquivo
         InputStream fileInputStream = new FileInputStream("java-io/src/loremIpsum.txt");

@@ -2,7 +2,7 @@ package br.com.china.bibliotecas.java.io.teste;
 
 import java.io.*;
 
-public class TesteEscrita {
+public class TesteEscritaFileOutputStream {
     public static void main(String[] args) throws IOException {
         // Fluxo de escrita em arquivo
         OutputStream fileInputStream = new FileOutputStream("java-io/src/loremIpsum.txt");
